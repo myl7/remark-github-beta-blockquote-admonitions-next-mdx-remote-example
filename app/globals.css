@@ -18,10 +18,21 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.admonition {
+  @apply p-4;
+}
+
+.admonition > .admonition-title {
+  @apply text-xl font-bold;
+}
+
+.admonition .admonition > .admonition-title {
+  @apply text-lg font-bold;
+}
+
+.admonition .admonition .admonition > .admonition-title {
+  @apply text-base font-bold;
 }
